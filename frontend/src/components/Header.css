@@ -1,0 +1,54 @@
+.header {
+    background-color: #222;
+    color: rgb(132, 130, 130);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+  
+  .header a:hover {
+    color: #ccc;
+  }
+  
+  .header .username {
+    font-size: 0.9rem;
+    margin-right: 1rem;
+  }
+  /* Header.css */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Відступи між елементами */
+}
+
+.nav-item {
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.nav-item:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -0.75rem;
+  opacity: 0.3;
+}
+
+.username {
+  font-weight: 600;
+  color: #e4e3e3;
+}
+
+.logout-btn {
+  color: #d32f2f;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
