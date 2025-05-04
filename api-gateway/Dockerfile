@@ -1,11 +1,12 @@
-FROM node:20
+FROM node:20-slim
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --legacy-peer-deps
+RUN npm install --legacy-peer-deps && npm audit fix
 
 COPY . .
+
 
 CMD ["npm", "run", "start:dev"]

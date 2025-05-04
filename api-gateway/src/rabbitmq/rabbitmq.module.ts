@@ -16,6 +16,24 @@ import { RabbitMQService } from './rabbitmq.service';
           },
         },
       },
+      {
+        name: 'BOOK_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: ['amqp://rabbitmq:5672'],
+          queue: 'book_queue',
+          queueOptions: { durable: true },
+        },
+      },
+      {
+        name: 'READING_SERVICE', 
+        transport: Transport.RMQ,
+        options: {
+          urls: ['amqp://rabbitmq:5672'],
+          queue: 'reading_queue', 
+          queueOptions: { durable: true },
+        },
+      },
     ]),
   ],
   providers: [RabbitMQService],
